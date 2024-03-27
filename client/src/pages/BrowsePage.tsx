@@ -1,6 +1,7 @@
 import Logo from "@/components/ui/Logo"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { cn } from "@/lib/utils"
 import { Bell, ChevronDown, Info, Play, Search } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
@@ -70,20 +71,20 @@ function TitleCardRow({ title }: { title: string }) {
         <h2 className="mb-2">{title}</h2>
         <Carousel >
             <CarouselContent>
-                <CarouselItem className="basis-1/3">
-                    <Card id="1" src="https://occ-0-6210-1009.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABepFbvo69uVQ69MkH7QkO2UJDKE7yYVWE0MRTfJBcZL_Tfa_-kE91GSmYedAreEAQ5vzPjVLCghEjqxGZKu8vILZWa2T7Fx2tJSpcsb2Cjws_wAsPfsrMjDfJhfx-el2xTUthO7ocLPXyeOH3e_LPLGApNbymQepvb1E-gH2M-IfnqL6Qvc3JvNecdNKyZUVILYMph5c7Iu0wIWTezH_nT2bT0-rbHPjDaKf2sEp9WIilpqT5jgTCYLEFHvs67VCiHywWpaVBF7i5z97G519z7omsLjQXJGO7LHKQWo_-hlUEdUW_L9yndAaNPfYGoylJmjVXCRUQ13zXlfcznol32Q.webp?r=822" />
+                <CarouselItem className="max-sm:basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6">
+                    <Card className="" id="1" src="https://occ-0-6210-1009.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABepFbvo69uVQ69MkH7QkO2UJDKE7yYVWE0MRTfJBcZL_Tfa_-kE91GSmYedAreEAQ5vzPjVLCghEjqxGZKu8vILZWa2T7Fx2tJSpcsb2Cjws_wAsPfsrMjDfJhfx-el2xTUthO7ocLPXyeOH3e_LPLGApNbymQepvb1E-gH2M-IfnqL6Qvc3JvNecdNKyZUVILYMph5c7Iu0wIWTezH_nT2bT0-rbHPjDaKf2sEp9WIilpqT5jgTCYLEFHvs67VCiHywWpaVBF7i5z97G519z7omsLjQXJGO7LHKQWo_-hlUEdUW_L9yndAaNPfYGoylJmjVXCRUQ13zXlfcznol32Q.webp?r=822" />
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="max-sm:basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6">
                     <Card id="2" src="https://occ-0-6210-1009.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQIt9JfVOvnhmq0az7inGvCyIx7Kz3cHFkxmn1pE5hv5WVCMmfs6q1e6WRoCPY28qFpRATDxwgy0-CJtOt30zJwFlVfW4S1JVtRQHFCBeNIfI4l5JN4nqjSbO2xmdCSb21-ujSs8b7qT096T_qohJAZIJo-viJ38PyaNzoqQ3bjy6WxzHoS1HF4K2ZPxq_hqkyYmnDBBG2bSUSvSOTit6W9FWYHfpE_fsnH_0VnU19EPvN229so95M4BxU2x9PLBJSgtgXMRSn-wAbz9_H7fxRoSMbkcRdChjVtZUtMXKlN1yQwQttmhxVQZOM48BdLAeEVenO1iJtYArwWa_I2CduGuPxPZ1ReA5OBWNgadkNs-q46zxf8.jpg?r=aec" />
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="max-sm:basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6">
                     <Card id="3" src="https://occ-0-6210-1009.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABT8E9r7AzpPIo6WpRfJGSi3vsx5seCjef_AFJXUsnFgextXyUQgD2MG3LwSGwHd2PjCmj6VyMQwl314B1y_u-K35TT0a-s6yoc0jbaAEpkvVNwo4RV3PioyUW64WyRc8Lyv6fqn-avmpc0YV9Vn5shGo_Cr-aWYxTRSyEJVwFlDJPGF_dUwsy71dUno7Uts5MHKFr76l3UVZr2vc7e3LLpYMYp5lQbyUnjpm3bSsAprwIx-nbLRQRElo9CzVljWKvnixB-LvqoUciP074uXHuGt_rxmAAPEmdeQ-BHaHtSWq0n2gJhWhLk_IpGHu0a4Uv4-4-KtR_saXCqkjaHNuFyfOHhajJ45ORcaEMF5rJrNhIWh53m4.jpg?r=3d5" />
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="max-sm:basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6">
                     <Card id="4" src="https://occ-0-6210-1009.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfo9wLc6aJowGhSAKdMSJORgttzZ43Hj7GFzw2Uzg1Au1DDsogCIY6KiyNtafrrzZbi-uEiyEi3cunPMK0GFGL-aJDLk3Eymjp4UvtAFRzWC_TueUGtYDspeLouIdSikJRLB41_Ts0dCTiIl90rg5Bv6dbAQ9q-geW9iC2VM48qDKNxfJelUhlIh8dQDGFrbv5_ou-GYcZMYw7k_Vxh4BA3zwJbhOZh-dT9O7YRaCJwoWIV6rGQGm4F115_2nyDtn3wArBvohV8SeJaDv8-6Tj1xgad_.webp?r=a8a" />
                 </CarouselItem>
             </CarouselContent>
-            <div className="hover:bg-gray-900 opacity-55 absolute flex h-full w-[40px] top-0 right-[0px] items-center" >
+            <div className="hover:bg-gray-900 opacity-55 absolute flex h-full w-[40px] top-0 right-[0px] items-center max-sm:" >
                 <CarouselNext className="absolute  top-[50%] left-1 hover:opacity-100" />
             </div>
             <div className="hover:bg-gray-900 opacity-55 absolute flex h-full w-[40px] top-0 left-[0px] items-center" >
@@ -93,21 +94,17 @@ function TitleCardRow({ title }: { title: string }) {
     </div>
 }
 
-// function Slider({ children }: { children: React.ReactNode }) {
-//     return <div className="flex gap-1">{children}</div>
-// }
-
-function Card({ src, id }: { src: string, id: string }) {
+function Card({ src, id, className }: { src: string, id: string, className?: string }) {
     const navigate = useNavigate()
     function handleClick() {
         navigate(`/watch/${id}`)
     }
     return <div
-        className="cursor-pointer "
+        className="cursor-pointer"
         onClick={handleClick}
     >
         <img
-            className="rounded-sm border border-opacity-0 border-gray-600 hover:border-opacity-100"
+            className={cn("rounded-sm border border-opacity-0 border-gray-600 hover:border-opacity-100 ", className)}
             src={src} />
     </div>
 }

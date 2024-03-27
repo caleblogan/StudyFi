@@ -12,7 +12,6 @@ const videos = [
 export default function Watch() {
     const { id } = useParams<{ id: string }>();
     const [video] = useState(videos[id as unknown as number])
-    console.log(id, video)
     return (
         <div className="bg-gray-900 min-h-screen text-white h-screen">
             <div className="h-[5%] flex items-center">
@@ -20,7 +19,7 @@ export default function Watch() {
                     <ArrowLeftIcon className="h-6 ml-2" />
                 </Link>
             </div>
-            <iframe width="100%" height="95%" src={`https://www.youtube.com/embed/${video.youtube_id}?autoplay=0`} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe width="100%" height="95%" src={`https://www.youtube.com/embed/${video.youtube_id}?autoplay=1`} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div >
     )
 }
